@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run myshell",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/myshell",
+            "args": ["blank.dsk", "-f"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb", // Replace this with the actual path to your GDB
+            "preLaunchTask": "", // No pre-launch task is needed if you don't need to build
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
